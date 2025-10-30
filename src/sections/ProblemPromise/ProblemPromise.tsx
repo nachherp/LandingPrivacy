@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./ProblemPromise.module.css";
 import { landingData } from "../../data/landingData";
 

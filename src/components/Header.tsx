@@ -8,11 +8,7 @@ export default function Header(): JSX.Element {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const openWhatsApp = (e: React.MouseEvent) => {
-    e.preventDefault();
-    const onlyDigits = whatsappNumber.replace(/\D/g, "");
-    window.open(`https://wa.me/${onlyDigits}`, "_blank", "noopener,noreferrer");
-  };
+
 
   const handleHashClick = (e: React.MouseEvent<HTMLAnchorElement>, hashId: string) => {
     e.preventDefault();
