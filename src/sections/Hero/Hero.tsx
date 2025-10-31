@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Hero.module.css";
 import { landingData } from "../../data/landingData";
 import Plasma from './plasma';
+import { Link } from "react-router-dom";
 
 
 export default function Hero(): JSX.Element {
@@ -40,20 +41,10 @@ export default function Hero(): JSX.Element {
           <p className={styles.subhead}>{hero.subheadline}</p>
 
           <div className={styles.ctaRow}>
+<Link to="/contact" className={styles.primaryBtn}>
+  {hero.cta}
+</Link>
 
-            <a
-              href="#contact"
-              onClick={(e) => {
-                e.preventDefault();
-                // Scroll suave al formulario/contacto si existe
-                const el = document.querySelector("#contact");
-                if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
-                else openWhatsApp(e);
-              }}
-              className={styles.primaryBtn}
-            >
-              {hero.cta}
-            </a>
 
             <button className={styles.whatsappBtn} onClick={openWhatsApp} aria-label="Abrir WhatsApp">
               <svg

@@ -1,5 +1,5 @@
 // src/Home.tsx
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Hero from "./sections/Hero/Hero";
 import ProblemPromise from "./sections/ProblemPromise/ProblemPromise";

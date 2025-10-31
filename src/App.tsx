@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -9,7 +8,7 @@ import ResultsOffer from "./sections/ResultsOffer/ResultsOffer";
 import PrivacyNotice from "./sections/PrivacyNotice/PrivacyNotice";
 import styles from "./App.module.css";
 import { landingData } from "./data/landingData";
-
+import ContactForm from "./sections/ContactForm/ContactForm";
 /**
  * Home component (página principal) definida aquí para mantener App.tsx simple.
  * También podría moverse a su propio archivo si prefieres.
@@ -33,6 +32,14 @@ function PrivacyPage(): JSX.Element {
     </main>
   );
 }
+function ContactPage(): JSX.Element {
+  return (
+    <main>
+      <ContactForm />
+    </main>
+  );
+}
+
 
 export default function App(): JSX.Element {
   const whatsappLink = `https://wa.me/${landingData.whatsappNumber.replace(/\D/g, "")}`;
@@ -46,6 +53,7 @@ export default function App(): JSX.Element {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/privacy" element={<PrivacyPage />} />
+            <Route path="/contact" element={<ContactPage />} />
             {/* Si quieres soportar /avisoprivacidad como alias, agrega otra Route */}
             {/* <Route path="/avisoprivacidad" element={<PrivacyPage />} /> */}
           </Routes>
