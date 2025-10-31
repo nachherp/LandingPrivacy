@@ -10,7 +10,7 @@ export default function PrivacyNotice(): JSX.Element {
         <p className={styles.updated}>Última actualización: Octubre 2025</p>
 
         <p>
-          En <strong>WhatsApp Automation</strong> (en adelante, “la Empresa” o
+          En <strong>José Ignacio Hernández Pérez</strong> (en adelante, “la Empresa” o
           “nosotros”), con domicilio en Ciudad de México, México, y correo de
           contacto{" "}
           <a href="mailto:contacto@whatsappautomation.mx">contacto@whatsappautomation.mx</a>, somos
